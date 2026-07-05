@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather app</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Cabin:wght@500&family=Oswald:wght@500&display=swap" rel="stylesheet">
+    <script src="script.js" defer ></script>
+</head>
+
+<body>
+
+    <div id="img-wrap">
+
+    <nav>
+        <div id="web-name">
+            <img src="images/weather-icon-01.png" >
+            <span><a href="index.html">Weather Forecast</a></span>
+        </div>
+
+        <div id="options">
+
+            <ul>
+                <li><a href="index.html">Home</a> </li>
+                <li><a href="about.html">About</a> </li>
+                <li><a href="how-to-use.html" class="low-col">How To Use ?</a></li>
+            </ul>
+
+        </div>
+
+        <div id="search-bar">
+
+            <input type="text" id="search-box">
+            <input type="button" value="search"  id="search-but" >
+        </div>
+
+    </nav>
+
+
+
+
+    <h3 id="weath-title">weather for <span class="city-name" >"Location"</span></h3>
+    
+    <div id="weath-data">
+
+        <div id="box-1" class="box">
+            <h3 class="box-heading"  >Temperatures</h3>
+            <p>temperature is <span class="box-bold" id = "temp"> ___ </span> C</p>
+            <p>min temperature is <span id = "min-temp">___</span> C</p>
+            <p>max temperature is <span id = "max-temp">___ </span>C</p>
+        
+        </div>
+
+
+        <div id="box-2" class="box">
+            <h3 class="box-heading" >Humidity Info</h3>
+            
+            <p>humidity is <span class="box-bold" id="humidity">___</span>%</p>
+            <p>wind degree is <span  id="win-deg" >___</span>%</p>
+            <p>feels like <span id="feels-like">___</span>k</p>  
+        </div>
+
+
+        <div id="box-3" class="box">
+        <h3 class="box-heading" >Wind Info</h3>
+
+        <p>wind speed is <span class="box-bold" id="wind-speed">___</span> m/s</p>
+        <p> weather  <span id="weath-main">___</span></p>
+        <p>weather description  <span id="weath-desc">___</span></p>
+        </div>
+
+    </div>
+
+    </div>
+
+    <div class="border-wrap"></div>
+
+    <div id="add-info">
+
+        <h2>MORE INFORMATION</h2>
+
+        <ol>
+            
+            <li>
+                <a href="solar.html"  target="_blank" >about solar pannels</a>
+            </li>
+            <li>
+                <a href="SolarPlants.html" target="_blank">About solar plants</a>
+            </li>
+            <li>
+                <a href="where-to-place-your-solar-panels.html" target="_blank">regions suitable for solar panels</a>
+            </li>
+            <li>
+                <a href="turbine.html" target="_blank">About Wind Turbines</a>
+            </li>
+            <li>
+                <a href="factor-affect-turbine.html" target="_blank">factor affecting wind turbines</a>
+            </li>
+            <li>
+                <a href="where-to-place-your-solar-turbines.html" target="_blank">where to place wind turbines</a>
+            </li>
+        </ol>
+    
+
+
+    </div>
+
+    
+
+
+</body>
+
+</html>

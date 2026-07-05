@@ -1,0 +1,253 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --color-2: rgb(13, 180, 213);
+    --low-col: rgb(182, 180, 180);
+    --border-col: rgba(121, 119, 119);
+}
+
+#img-wrap{
+    height: 95vh;
+    background-image: url(images/25503.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* creating a nav bar */
+nav {
+    /* background-color: var(--color-2); */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 2fr) 1fr;
+    height: 10vh;
+    border-bottom: 1px solid green ; 
+    box-shadow: 0px 3px #f2f2f2;
+}
+
+nav span a{
+    text-decoration: none;
+    color: green;
+
+}
+
+nav #web-name {
+    margin-left: 10px;
+    display: flex; 
+    height: auto;
+    align-items: center; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* justify-content: space-around; */
+    font-size: xx-large;
+    font-weight: bold;
+    color: green;
+
+}
+
+#web-name img{
+    width: 50px;
+    height: 50px;
+}
+
+nav div ul {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 40vw;
+    list-style: none;
+    float: left;
+}
+
+nav div ul li {
+    margin: 1vw;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+nav div ul li a {
+    text-decoration: none;
+    color: rgb(2, 98, 2);
+}
+
+nav div ul li:hover a {
+    color: rgb(1, 169, 1);
+}
+
+.low-col {
+    color: var(--low-col);
+}
+
+
+
+
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 4vw;
+}
+
+
+#search-bar #search-box {
+    height: 32px;
+    width: 175px;
+    text-decoration: none;
+    border: var(--color-2);
+    color: green;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    border-radius: 3px;
+    box-shadow: 2px 2px #d2caca;
+}
+
+#search-box:focus {
+    outline: none;
+}
+
+
+ #search-but {
+    border: 1px solid green;
+    color: green;
+    font-size: large;
+    margin: 7px;
+    border-radius: 3px;
+    background-color: white;
+    width: 85px;
+    height: 35px;
+    box-shadow: 3px 2px green;
+    
+} 
+
+#search-but:hover{
+    color: white;
+    background-color: green;
+    border: 2px solid white;
+}
+
+
+/* creating the weather display content */
+
+#weath-title {
+    margin: 5vh;
+    text-align: center;
+   
+    text-transform: capitalize;
+    font-size: 2vw;
+    font-weight: lighter;
+
+}
+
+#weath-data {
+    /* justify-items: center; 
+    background-color: #d2caca;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px , 1fr)); */
+    text-transform: capitalize;
+    display: flex;
+    flex-wrap:nowrap;
+    justify-content: center;
+    
+}
+
+
+
+/* #box-1 {
+
+    
+
+}
+
+#box-2 {
+    
+}
+
+
+#box-3 {
+   
+} */
+
+.box {
+    background-color: white;
+    margin: 5px 15px;
+    width: 400px;
+    height: 250px;
+    border: 3px solid  green;  /*rgb(153, 153, 153) , rgb(142, 142, 142)*/
+    box-shadow: 3px 3px  rgba(0, 128, 0, 0.615) ;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+div#weath-data .box-bold{
+    font-family: 'Oswald', sans-serif; 
+    font-size: x-large;
+}
+
+.box p{
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 10px 10px;
+    font-size: x-large;
+}
+
+.box-heading {
+    padding-bottom: 5px ;
+    border-bottom: 3px solid rgb(184, 184, 184);
+    font-size: x-large;
+    letter-spacing: 2px;
+    color: rgb(11, 90, 81);
+    font-family: 'Oswald', sans-serif; 
+    font-weight: 200px;
+    margin: 20px 0px 30px  0px; /*top , right , bottom , left*/
+}
+
+
+
+#add-info{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px 30px;
+    border-top: 2px solid green  ;
+    justify-content: center;
+}
+
+#add-info h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.792);
+    font-size: larger;
+    font-family: 'Oswald', sans-serif ;
+    font-weight: lighter;
+
+}
+
+#add-info li{
+    margin: 10px 0px;
+}
+
+#add-info a{
+    text-decoration: none;
+    color: green;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-size: larger;
+    font-family: 'Barlow Condensed', sans-serif ;
+    font-weight: bold;
+    
+}
+
+#add-info a:hover{
+    color: black;
+}
+
+#add-info a:focus{
+    color: lightgreen;
+}
+

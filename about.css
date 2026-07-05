@@ -1,0 +1,144 @@
+/* Reset some default styles */
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Apply styles to the navigation bar */
+
+nav {
+    /* background-color: var(--color-2); */
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr minmax(200px, 2fr) 1fr;
+    height: 10vh;
+    border-bottom: 1px solid green ; 
+    box-shadow: 0px 3px #f2f2f2;
+}
+
+nav span a{
+    text-decoration: none;
+    color: green;
+
+}
+
+nav #web-name {
+    margin-left: 10px;
+    display: flex; 
+    height: auto;
+    align-items: center; 
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* justify-content: space-around; */
+    font-size: xx-large;
+    font-weight: bold;
+    color: green;
+
+}
+
+#web-name img{
+    width: 50px;
+    height: 50px;
+}
+
+nav div ul {
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    width: 40vw;
+    list-style: none;
+    float: left;
+}
+
+nav div ul li {
+    margin: 1vw;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+nav div ul li a {
+    text-decoration: none;
+    color: rgb(2, 98, 2);
+}
+
+nav div ul li:hover a {
+    color: rgb(1, 169, 1);
+}
+
+.low-col {
+    color: var(--low-col);
+}
+
+#search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 4vw;
+}
+
+
+#search-bar #search-box {
+    height: 32px;
+    width: 175px;
+    text-decoration: none;
+    border: var(--color-2);
+    color: green;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    border-radius: 3px;
+    box-shadow: 2px 2px #d2caca;
+}
+
+#search-box:focus {
+    outline: none;
+}
+
+
+ #search-but {
+    border: 1px solid green;
+    color: green;
+    font-size: large;
+    margin: 7px;
+    border-radius: 3px;
+    background-color: white;
+    width: 85px;
+    height: 35px;
+    box-shadow: 3px 2px green;
+    
+} 
+
+#search-but:hover{
+    color: white;
+    background-color: green;
+    border: 2px solid white;
+}
+
+
+
+/* Style the About content */
+#about-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+#about-content h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#about-content p {
+    margin-bottom: 15px;
+}
+
+#about-content ul {
+    margin-bottom: 15px;
+}
+
+#about-content ul li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Add more styles for other sections as needed */
+
