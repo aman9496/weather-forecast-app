@@ -14,14 +14,12 @@ let weathMain = document.getElementById("weath-main");
 let weathDesc = document.getElementById("weath-desc");
 
 
-let showWeahter = (data) =>{
+let showWeahter = (data) => {
 	// console.log(data.main.temp);
-	
-    
 	temp.innerHTML = (data.main.temp - 273).toFixed(2);
-	minTemp.innerHTML =( data.main.temp_min - 273).toFixed(2);
-	maxTemp.innerHTML = ( data.main.temp_max - 273).toFixed(2);
-	windDegree.innerHTML = data.wind.deg ; 
+	minTemp.innerHTML = (data.main.temp_min - 273).toFixed(2);
+	maxTemp.innerHTML = (data.main.temp_max - 273).toFixed(2);
+	windDegree.innerHTML = data.wind.deg;
 	feelsLike.innerHTML = data.main.feels_like;
 	humidity.innerHTML = data.main.humidity;
 	windSpeed.innerHTML = data.wind.speed;
@@ -29,9 +27,7 @@ let showWeahter = (data) =>{
 	weathDesc.innerHTML = data.weather[0].description;
 };
 
-
-
-const getWeatherDetails = (cityName , lat , lon ) => {
+const getWeatherDetails = (cityName, lat, lon) => {
 	const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
 	fetch(WEATHER_API_URL).then(res => res.json()).then(data => {
@@ -55,36 +51,28 @@ const getWeatherDetails = (cityName , lat , lon ) => {
 	})
 }
 
-
-let  getCityCoordinate = () => {
+let getCityCoordinate = () => {
 	const cityName = cityInput.value.trim(); // city name entered in the searchbox
 
-	if(!cityName) return ; // if empty 
+	if (!cityName) return; // if empty 
 	console.log(cityName);
-	cityD.innerHTML= cityName;
+	cityD.innerHTML = cityName;
 	const GEOCODING_API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
-
-
-
 
 	// get entered city coordinates (latitude , longitude and name ) from the api response
 	fetch(GEOCODING_API_URL).then(res => res.json()).then(data => {
 		console.log(data);
 
-		// if(!data.length){
-		// return alert(`No coordinates found for ${cityName}`)
-		// };
+		const { name, lat, lon } = data[0];
+		getWeatherDetails(name, lat, lon);
 
-		const { name , lat , lon } = data[0];
-		getWeatherDetails(name, lat , lon);
-
-	 }).catch(() => {
+	}).catch(() => {
 		alert("An error occured while fetching the coordinates!");
 		window.location.reload();
 	});
 }
 
-searchBut.addEventListener("click" , getCityCoordinate)
+searchBut.addEventListener("click", getCityCoordinate)
 
 
 
